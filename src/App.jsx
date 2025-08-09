@@ -1,8 +1,24 @@
+import { Route,Routes } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Project from "./pages/Project";
+import Contact from "./pages/Contact";
+
+
+
 function App() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white text-4xl font-bold">
-      Tailwind is working! 🚀
-    </div>
+<>
+<Navbar/>
+  <Routes>
+    <Route path="/" element={<Home/>} />
+    <Route path="/about" element={<About/>}/>
+    <Route path="/project" element={<Project/>}/>
+    <Route path="/contact" element={<Contact/>}/>
+
+  </Routes>
+</>
   );
 }
 
